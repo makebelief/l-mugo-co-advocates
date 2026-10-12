@@ -1,6 +1,6 @@
 # L. Mugo & Co. Advocates — Website
 
-Static production website. All files live in the repository root. No framework or build step required.
+Static production website. All files live in the repository root. No framework or build step required. The visual colour scheme follows the supplied navy-and-maroon crest: primary brand maroon #8A283C, lighter rose #EBA4AE on dark backgrounds, navy #081637. Gold accents from the original reference template have been replaced sitewide.
 
 ## Source and factual caveats
 - Firm name, offices, telephone and emails from supplied screenshots. Verify directly before client launch.
@@ -23,5 +23,5 @@ npx vercel --prod
 
 ## Update after first deployment
 ```bash
-git add -A && git commit -m "Update L Mugo Advocates website" && git push origin main && npx vercel --prod
+git add -A && (git diff --cached --quiet || git commit -m "Update L Mugo Advocates website") && git push origin main && npx vercel --prod
 ```

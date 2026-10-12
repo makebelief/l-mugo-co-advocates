@@ -1,11 +1,11 @@
 # One-paste Ubuntu deployment
 
-1. Save the supplied `l-mugo-co-advocates-production.zip` into `~/Downloads`.
+1. Save the supplied `l-mugo-co-advocates-maroon-brand-update.zip` into `~/Downloads`.
 2. Ensure the GitHub CLI (`gh`) and Vercel CLI (`vercel` or `npx vercel`) are authenticated.
-3. Paste the complete command below once. This creates a **new public** GitHub repository and launches a separate Vercel project.
+3. Paste the complete command below once. For this **brand-colour update**, use the existing GitHub repository and Vercel project. This ZIP is not intended to create a new repository.
 
 ```bash
-cd ~/Downloads && unzip -oq l-mugo-co-advocates-production.zip && cd l-mugo-co-advocates && git init && git branch -M main && git add -A && git commit -m "Launch L Mugo and Co Advocates website" && gh repo create l-mugo-co-advocates --public --source=. --remote=origin --push && npx vercel --prod
+cd ~/Downloads && unzip -oq l-mugo-co-advocates-maroon-brand-update.zip && cd l-mugo-co-advocates && git add -A && (git diff --cached --quiet || git commit -m "Match website colours to Mugo maroon logo") && git push origin main && npx vercel --prod
 ```
 
 For future edits, replace the website files inside the already cloned repository, then run:
